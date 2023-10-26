@@ -26,9 +26,7 @@ public abstract class Produto {
 
 
 
-
-
-    //////////////////Setters///////////////////////////
+    ///////////////////Setters//////////////////////////
     public void setNome(String nome) {
         this.nome = nome;
     }
