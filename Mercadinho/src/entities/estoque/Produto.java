@@ -23,7 +23,7 @@ public abstract class Produto {
 
 
 
-    ///////////////////Getters//////////////////////////
+    //////////////////Setters///////////////////////////
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -41,7 +41,7 @@ public abstract class Produto {
     }
 
 
-    ///////////////////Setters//////////////////////////
+    ///////////////////Getters//////////////////////////
     public String getNome() {
         return nome;
     }
