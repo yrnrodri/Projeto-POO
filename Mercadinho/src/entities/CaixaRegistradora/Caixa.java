@@ -1,4 +1,4 @@
-package entities.caixaRegistardora;
+package entities.caixaRegistradora;
 
 public class Caixa {
     private String nomeCliente;
