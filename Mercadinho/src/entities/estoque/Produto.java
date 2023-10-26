@@ -1,4 +1,4 @@
-package estoque;
+package entities.estoque;
 
 public abstract class Produto {
     private String nome;
@@ -15,7 +15,7 @@ public abstract class Produto {
         this.preco = preco;
     }
 
-    public void vender(){}  //Tem que ser implementado
+    public void vender(){}  //Tem que ser implementado pelas filhas
 
     public void adicionar(){  }      //na real esse metodo la na parte do front vai ser redundante pois é so repetir esta mesma classe para ser instanciada, pensem ai pedreiros pq nao sei nao
 
