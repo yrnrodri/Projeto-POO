@@ -15,8 +15,6 @@ public abstract class Produto {
         this.preco = preco;
     }
 
-    public void vender(){}  //Tem que ser implementado pelas filhas
-
     public double precoFinal(){
         return quantidade * preco;
     }
