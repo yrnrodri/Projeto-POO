@@ -17,8 +17,6 @@ public abstract class Produto {
 
     public void vender(){}  //Tem que ser implementado pelas filhas
 
-    public void adicionar(){  }      //na real esse metodo la na parte do front vai ser redundante pois é so repetir esta mesma classe para ser instanciada, pensem ai pedreiros pq nao sei nao
-
     public double precoFinal(){
         return quantidade * preco;
     }
