@@ -2,29 +2,31 @@ package entities.estoque;
 
 public abstract class Produto {
     private String nome;
+    private boolean tipo;   //true se comida //false se objeto
     private String ID;
-    private String marca;
     private int quantidade;
     private double preco;
+    public static final double TAXACOMIDA = 1.30;
+    public static final double TAXAOBJ = 1.20;
 
-    public Produto(String nome, String iD, String marca, int quantidade, double preco) {
+
+    public Produto(String nome,boolean tipo, String iD, int quantidade, double preco) {
         this.nome = nome;
+        this.tipo = tipo;
         this.ID = iD;
-        this.marca = marca;
         this.quantidade = quantidade;
         this.preco = preco;
     }
 
-    public void vender(){}  //Tem que ser implementado pelas filhas
-
-    public void adicionar(){  }      //na real esse metodo la na parte do front vai ser redundante pois é so repetir esta mesma classe para ser instanciada, pensem ai pedreiros pq nao sei nao
-
     public double precoFinal(){
-        return quantidade * preco;
+        if(tipo == true){
+            System.out.println("Este produto é um alimento");
+            return (quantidade * preco) * TAXACOMIDA;
+        }else{
+            return (quantidade * preco) * TAXAOBJ;
+
+        }
     }
-
-
-
 
     ///////////////////Setters//////////////////////////
     public void setNome(String nome) {
@@ -34,11 +36,6 @@ public abstract class Produto {
     public void setID(String iD) {
         ID = iD;
     }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
@@ -50,9 +47,6 @@ public abstract class Produto {
     }
     public String getID() {
         return ID;
-    }
-    public String getMarca() {
-        return marca;
     }
     public int getQuantidade() {
         return quantidade;
