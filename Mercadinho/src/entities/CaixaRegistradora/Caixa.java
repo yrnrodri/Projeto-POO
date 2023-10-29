@@ -1,7 +1,5 @@
 package entities.CaixaRegistradora;
 
-import java.util.List;
-
 import entities.estoque.Produto;
 
 public class Caixa {
