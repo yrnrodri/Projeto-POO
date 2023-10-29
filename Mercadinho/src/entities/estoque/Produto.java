@@ -1,6 +1,6 @@
 package entities.estoque;
-
-public abstract class Produto {
+//Será um vetor
+public class Produto {
     private String nome;
     private boolean tipo;   //true se comida //false se objeto
     private String ID;
